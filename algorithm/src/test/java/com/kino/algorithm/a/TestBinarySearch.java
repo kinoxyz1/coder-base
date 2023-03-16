@@ -49,6 +49,7 @@ public class TestBinarySearch {
     @DisplayName("Recurrence: found and not found")
     public void findRecurrence() {
         int[] arr = {2, 5, 8, 10, 23, 54, 78, 99};
+
         assertEquals(0, binarySearchRecurrence(arr,  0, arr.length - 1, 2));
         assertEquals(1, binarySearchRecurrence(arr,  0, arr.length - 1, 5));
         assertEquals(2, binarySearchRecurrence(arr,  0, arr.length - 1, 8));

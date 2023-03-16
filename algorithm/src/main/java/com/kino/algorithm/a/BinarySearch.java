@@ -13,8 +13,11 @@ public class BinarySearch {
      */
     public static int binarySearch(int[] arr, int key) {
         int low = 0, high = arr.length - 1; // 区间是: [low, high]
-        while (low <= high) { // 因为两边都是闭区间, 所以可能出现 low == high 的情况, 这里需要用 <= 保证这种情况不能丢数.
-            // 用位运算是考虑 数组 为 INT 最大值的时候, 如果使用的是 (n / 2), 在第一次 while 结束后, 如果 low 被赋值, 那第二次将会出现 mid 等于负数的情况
+        // 因为两边都是闭区间, 所以可能出现 low == high 的情况, 这里需要用 <= 保证这种情况不能丢数.
+        while (low <= high) {
+            // 用位运算是考虑 数组 等于 Integer.MAX_VALUE 的时候,
+            // 如果使用的是 (n / 2), 在第一次 while 结束后, 如果 low 被赋值,
+            // 那第二次将会出现 mid 等于负数的情况
             int mid = (low + high) >>> 1;
             if (key < arr[mid]) {
                 high = mid - 1; // mid 的值比较过了, 所以这里取 前一个 值的下标
@@ -110,7 +113,11 @@ public class BinarySearch {
     }
 
     /**
-     * key 重复时, 找最左侧的(不管找不找得到都返回一个索引, 找不到返回的索引: key可以插入这个索引中; 找得到的索引: key 所在的索引)
+     * key 重复时, 找最左侧的(
+     *      不管找不找得到都返回一个索引,
+     *      找不到返回的索引: key可以插入这个索引中;
+     *      找得到的索引: key 所在的索引
+     * )
      */
     public static int binarySearchLeftMostResult(int[] arr, int key) {
         int low = 0, high = arr.length;
