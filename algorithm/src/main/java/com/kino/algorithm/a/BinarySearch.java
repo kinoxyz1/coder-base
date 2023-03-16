@@ -4,7 +4,7 @@ package com.kino.algorithm.a;
  * @author kino
  * @date 2023/03/16 01:10
  */
-public class BinarySearch {
+    public class BinarySearch {
     /**
      * 二分法(普通写法)
      * @param arr 给定数组
