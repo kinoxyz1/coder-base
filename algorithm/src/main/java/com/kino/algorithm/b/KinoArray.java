@@ -68,7 +68,6 @@ public class KinoArray implements Iterable<Integer>{
         return deleteElement;
     }
 
-
     // 下面均为查询方法
 
     /**
@@ -82,6 +81,7 @@ public class KinoArray implements Iterable<Integer>{
 
     /**
      * 使用函数式接口实现 print, 而不是在 for 中直接写死 print
+     * @TODO: 几种函数式接口的使用
      * @param consumer
      */
     public void foreach(Consumer<Integer> consumer){
@@ -89,7 +89,6 @@ public class KinoArray implements Iterable<Integer>{
             consumer.accept(arr[i]);
         }
     }
-
 
     @Override
     public Iterator<Integer> iterator() {
