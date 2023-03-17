@@ -51,7 +51,7 @@ public class LeetCodeTest704 {
     }
 
     /**
-     * 方式二: 可以查找有序可重复的array, 并且能找到 重复元素中最左侧 的那个元素的下标, 找不到的话返回 -1
+     * 方式二: 可以查找有序可重复的array, 并且能找到 重复元素中最左侧 的那个元素的下标, 找不到的话返回 -1.
      */
     private int method2(int[] array, int key) {
         int low = 0, high = array.length;
@@ -66,6 +66,13 @@ public class LeetCodeTest704 {
         return high <= array.length - 1 && array[high] == key ? high : -1;
     }
 
+    /**
+     * 方式三: 可以查找有序可重复的array, 并且能找到 重复元素中最右侧 的那个元素的下标, 找不到返回 -1.
+     *   但是不能像 method2 那样 return, 这里需要添加一个中间变量存储最终的结果才可以.
+     * @param array
+     * @param key
+     * @return
+     */
     private int method3(int[] array, int key) {
         int low = 0, high = array.length;
         int result = -1;
