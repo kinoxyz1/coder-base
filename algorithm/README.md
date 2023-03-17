@@ -6,7 +6,7 @@
 
 二分法的 leetcode 题: 
 
-[704. 二分查找](https://leetcode.cn/problems/binary-search/)
+[704. 二分查找](https://leetcode.cn/problems/binary-search/) -- [三种解题方式](src/test/java/com/kino/algorithm/a/LeetCodeTest704.java)
 
 [35. 搜索插入位置](https://leetcode.cn/problems/search-insert-position/)
 
