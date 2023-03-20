@@ -8,7 +8,7 @@
 
 [704. 二分查找](https://leetcode.cn/problems/binary-search/) -- [三种解题方式](src/test/java/com/kino/algorithm/a/LeetCodeTest704.java)
 
-[35. 搜索插入位置](https://leetcode.cn/problems/search-insert-position/)
+[35. 搜索插入位置](https://leetcode.cn/problems/search-insert-position/) -- [一种解题方式](src/test/java/com/kino/algorithm/a/LeetCodeTest35.java)
 
 [34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/)
 # 数组

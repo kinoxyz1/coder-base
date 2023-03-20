@@ -35,7 +35,7 @@ public class LeetCodeTest35 {
 
     /**
      * 方法一, 存在的问题:
-     *    如果 key 是 数组中的第一个元素时
+     *    光看返回值无法确定是数组中有没有对应的key, 可以改写成返回 如果不存在, 返回负数下标.
      */
     public int method1(int[] array, int key){
         int low = 0, high = array.length - 1;
