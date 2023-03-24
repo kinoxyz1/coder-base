@@ -9,7 +9,7 @@ import java.util.Iterator;
  */
 public class SinglyLinkedSentinelList<E> implements Iterable<E> {
     transient int size = 0;
-    private final Node<E> head;
+    private Node<E> head;
 
     public SinglyLinkedSentinelList() {
         head = new Node<E>(null, null);  // 哨兵
