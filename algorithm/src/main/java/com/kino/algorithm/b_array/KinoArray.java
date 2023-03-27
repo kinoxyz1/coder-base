@@ -1,4 +1,4 @@
-package com.kino.algorithm.b;
+package com.kino.algorithm.b_array;
 
 import java.util.Arrays;
 import java.util.Iterator;

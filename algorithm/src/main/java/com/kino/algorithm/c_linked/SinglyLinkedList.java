@@ -1,4 +1,4 @@
-package com.kino.algorithm.c;
+package com.kino.algorithm.c_linked;
 
 import java.util.Iterator;
 import java.util.function.Consumer;

@@ -1,4 +1,4 @@
-package com.kino.algorithm.c;
+package com.kino.algorithm.c_linked;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

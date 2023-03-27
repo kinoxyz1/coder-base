@@ -1,10 +1,9 @@
-package com.kino.algorithm.a;
+package com.kino.algorithm.a_binary;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.IdentityHashMap;
 
 /**
  * @author kino

@@ -1,11 +1,11 @@
-package com.kino.algorithm.a;
+package com.kino.algorithm.a_binary;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static com.kino.algorithm.a.BinarySearch.*;
+import static com.kino.algorithm.a_binary.BinarySearch.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestBinarySearch {

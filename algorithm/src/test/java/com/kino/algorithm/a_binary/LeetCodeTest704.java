@@ -1,4 +1,4 @@
-package com.kino.algorithm.a;
+package com.kino.algorithm.a_binary;
 
 import org.junit.jupiter.api.Test;
 

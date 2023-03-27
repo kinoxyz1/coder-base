@@ -1,8 +1,6 @@
-package com.kino.algorithm.b;
+package com.kino.algorithm.b_array;
 
 import org.junit.jupiter.api.Test;
-
-import java.util.Arrays;
 
 /**
  * @author kino
