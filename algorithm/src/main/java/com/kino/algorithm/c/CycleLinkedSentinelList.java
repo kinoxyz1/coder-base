@@ -8,9 +8,21 @@ import java.util.Iterator;
  * @date 2023/3/25 01:33
  */
 public class CycleLinkedSentinelList<E> implements Iterable<E> {
-
     transient int size = 0; // 链表大小
     private Node<E> sentinel;
+
+    private Node<E> findNode(int index) throws IllegalAccessException {
+        if(index <= -1 || index > size){
+            throw throwIllegalAccessException(index);
+        }
+        int count = 0;
+        for (Node<E> point = sentinel.next; point != sentinel; point = point.next, count++){
+            if(index == count){
+                return point;
+            }
+        }
+        return null;
+    }
 
     public void addFirst(E value){
         Node<E> next = sentinel.next;
@@ -19,6 +31,40 @@ public class CycleLinkedSentinelList<E> implements Iterable<E> {
         next.prev = added;
         size++;
     }
+
+    /**
+     * 向链表最后添加一个元素
+     * @param value
+     */
+    public void addLast(E value) {
+        Node<E> prev = sentinel.prev;
+        Node added = new Node(prev, value, sentinel);
+        prev.next = added;
+        sentinel.prev = added;
+        size++;
+    }
+
+    /**
+     * 向链表中的任意一个位置添加一个元素
+     * @param index
+     * @param value
+     */
+//    public void add(int index, E value) throws IllegalAccessException {
+//        if(size == 0){
+//            addFirst(value);
+//            return;
+//        }
+//        if(size == 1){
+//            addFirst(value);
+//            return;
+//        }
+//        Node<E> point = findNode(index);
+//        Node<E> prev = point.prev;
+//        Node<E> added = new Node<>(prev, value, point);
+//        prev.next = added;
+//        point.prev = added;
+//        size++;
+//    }
 
     public CycleLinkedSentinelList() {
         // 初始化空链表
@@ -39,6 +85,9 @@ public class CycleLinkedSentinelList<E> implements Iterable<E> {
         }
     }
 
+    private static IllegalAccessException throwIllegalAccessException(int index) {
+        return new IllegalAccessException(String.format("index: %s 非法.", index));
+    }
     @Override
     public Iterator<E> iterator() {
         return new Iterator<E>() {
