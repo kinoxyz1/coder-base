@@ -64,7 +64,7 @@ public class BubbleSort {
         if (right == 0) {
             return array;
         }
-        int sign = 0; // 打记号, 如果发生了交换, 就把被交换记录的index给boundary用于下一次递归
+        int sign = 0; // 打记号, 如果发生了交换, 就把被交换记录的index给sign用于下一次递归
         for (int i = 0; i < right; i++) {
             if (array[i] > array[i + 1]) {
                 int tmp = array[i];
