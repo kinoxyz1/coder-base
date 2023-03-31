@@ -2,6 +2,9 @@ package com.kino.algorithm.d_sort;
 
 import java.util.Arrays;
 
+import static com.kino.algorithm.a_binary.BinarySearch.binarySearchRecurrence;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 /**
  * 插入排序
  *
@@ -76,14 +79,68 @@ public class InsertSort {
      * @param array
      */
     public static void sort3(int[] array) {
+        if (null == array || array.length < 2) return;
+        if(array[1] < array[0]){
+            int tmp = array[1];
+            array[1] = array[0];
+            array[0] = tmp;
+        }
+        int bound = 2; // 边界
+        for (int i = bound; i < array.length; i++) {
+            int[] ints = new int[bound];
+            System.arraycopy(array, 0, ints, 0, bound);
+            int index = binary(ints, 0, bound - 1, array[bound]);
+            if(index < 0){
+                int tmp = array[bound];
+                int remove = Math.abs(index) - 1;
+                System.arraycopy(array, remove, array, remove + 1, ints.length - remove);
+                array[Math.abs(index) - 1] = tmp;
+            } else if(index == 0) {
+                System.arraycopy(array, 0, array,  1, ints.length);
+            }
+            bound++;
+        }
+    }
 
+    /**
+     * 递归实现二分法
+     * @param array 数组
+     * @param left 左边界
+     * @param right 有边界
+     * @param key 目标值
+     * @return 如果找到了, 返回的是目标值的下标, 如果没找到, Math.abs(return) - 1 => 可以在该 index 的位置插入记录.
+     */
+    private static int binary(int[] array, int left, int right, int key) {
+        if (null == array || array.length < 2) return -1;
+        if (right < left) return -(left+1);
+        int mid = (right + left) >> 1;
+        if (key < array[mid]) {
+            return binary(array, left, mid - 1, key);
+        } else if (array[mid] < key) {
+            return binary(array, mid+1, right, key);
+        } else {
+            return mid;
+        }
     }
 
     public static void main(String[] args) {
-        int[] array = {232, 61, 65, 23, 674, 367, 136, 2, 54, 64, 309, 92};
-        // sort4(array);
-        // sort2(array);
+        int[] array = {232, 61, 65, 23, 674, 367, 136, 23, 2, 54, 64, 309, 92};
+        // // sort4(array);
+        // // sort2(array);
         sort3(array);
         System.out.println(Arrays.toString(array));
+
+        // int[] arr = {2, 5, 8, 10, 23, 54, 78, 99};
+        //
+        // System.out.println(binary(arr, 0, arr.length - 1, 1));
+        // System.out.println(binary(arr, 0, arr.length - 1, 2));
+        // System.out.println(binary(arr, 0, arr.length - 1, 5));
+        // System.out.println(binary(arr, 0, arr.length - 1, 8));
+        // System.out.println(binary(arr, 0, arr.length - 1, 10));
+        // System.out.println(binary(arr, 0, arr.length - 1, 23));
+        // System.out.println(binary(arr, 0, arr.length - 1, 54));
+        // System.out.println(binary(arr, 0, arr.length - 1, 78));
+        // System.out.println(binary(arr, 0, arr.length - 1, 99));
+        // System.out.println(binary(arr, 0, arr.length - 1, 100));
     }
 }
