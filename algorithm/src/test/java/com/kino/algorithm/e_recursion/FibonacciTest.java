@@ -1,10 +1,7 @@
-package com.kino.algorithm.e_fibonacci;
+package com.kino.algorithm.e_recursion;
 
 import org.junit.jupiter.api.Test;
 
-import java.time.Duration;
-import java.time.LocalDate;
-import java.time.Period;
 import java.util.Arrays;
 
 /**
@@ -35,6 +32,6 @@ public class FibonacciTest {
 
     @Test
     public void test5() {
-        System.out.println(Fibonacci.fibonacciFrog(40));
+        System.out.println(Fibonacci.fibonacciFrog(39));
     }
 }

@@ -1,17 +1,15 @@
-package com.kino.algorithm.e_fibonacci;
+package com.kino.algorithm.e_recursion;
 
 import java.util.Arrays;
 
 /**
+ * 斐波那契是一个数列，这个数列的前两个数是0和1，从第三项开始，每一项都等于前两项之和。
+ * 因此，这个数列的前几项是：0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144，依此类推。
+ *
  * @author kino
  * @date 2023/4/3 15:57
  */
 public class Fibonacci {
-    /**
-     * 斐波那契是一个数列，这个数列的前两个数是0和1，从第三项开始，每一项都等于前两项之和。
-     * 因此，这个数列的前几项是：0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144，依此类推。
-     */
-
     public static long[] fibonacci1(int n) {
         long[] arr = new long[n];
         arr[0] = 0;
