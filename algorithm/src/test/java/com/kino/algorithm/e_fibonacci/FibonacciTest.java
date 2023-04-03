@@ -20,11 +20,21 @@ public class FibonacciTest {
 
     @Test
     public void test2() {
-        System.out.println(Fibonacci.fibonacci2(39));
+        System.out.println(Fibonacci.fibonacci2(4));
     }
 
     @Test
     public void test3() {
-        System.out.println(Fibonacci.fibonacci3(39));
+        System.out.println(Fibonacci.fibonacci3(40));
+    }
+
+    @Test
+    public void test4() {
+        System.out.println(Fibonacci.fibonacciRabbit(40));
+    }
+
+    @Test
+    public void test5() {
+        System.out.println(Fibonacci.fibonacciFrog(40));
     }
 }
