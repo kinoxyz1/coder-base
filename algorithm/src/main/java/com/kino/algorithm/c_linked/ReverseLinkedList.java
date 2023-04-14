@@ -80,7 +80,7 @@ public class ReverseLinkedList {
      * @param node 要反转的链表
      * @return 反转后的链表
      */
-    public static ListNode reverseLinkedList(ListNode node) {
+    public static ListNode reverseLinkedList3(ListNode node) {
         if (null == node || node.next == null) {
             return node;
         }
@@ -95,6 +95,29 @@ public class ReverseLinkedList {
         return p1;
     }
 
+    /**
+     * 方法四: 在方法二的基础上, 用面向过程的方式实现
+     * @param node
+     * @return
+     */
+    public static ListNode reverseLinkedList4(ListNode node) {
+        return null;
+    }
+
+    /**
+     * 方法五: 递归实现
+     * @param node
+     * @return
+     */
+    public static ListNode reverseLinkedList(ListNode node) {
+        if(node == null || node.next == null){
+            return node;
+        }
+        ListNode last = reverseLinkedList(node.next);
+        node.next.next = node;
+        node.next = null;
+        return last;
+    }
 }
 
 
