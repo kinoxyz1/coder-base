@@ -26,9 +26,10 @@ TODO: 合并有序数组 -
 
 环形链表 - [code](src/main/java/com/kino/algorithm/c_linked/CycleLinkedSentinelList.java) -- [test case](src/main/java/com/kino/algorithm/c_linked/CycleLinkedSentinelList.java)
 
-链表反转([leetcode 题](https://leetcode.cn/problems/reverse-linked-list/)) - [code](src/main/java/com/kino/algorithm/c_linked/ReverseLinkedList.java) -- [test case](src/test/java/com/kino/algorithm/c_linked/ReverseLinkedListTest.java)
+链表反转([leetcode 206 反转链表](https://leetcode.cn/problems/reverse-linked-list/)) - [code](src/main/java/com/kino/algorithm/c_linked/ReverseLinkedList.java) -- [test case](src/test/java/com/kino/algorithm/c_linked/ReverseLinkedListTest.java)
 
 TODO: 有序链表去重(包括递归)
+
 
 TODO: 合并N个链表
 
