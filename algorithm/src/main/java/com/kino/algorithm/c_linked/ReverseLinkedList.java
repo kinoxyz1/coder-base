@@ -101,7 +101,16 @@ public class ReverseLinkedList {
      * @return
      */
     public static ListNode reverseLinkedList4(ListNode node) {
-        return null;
+        if (null == node || node.next == null) {
+            return node;
+        }
+        ListNode newNode = null;
+        while (node != null) {
+            ListNode next = node.next;
+            newNode = new ListNode(node.value, newNode);
+            node = next;
+        }
+        return newNode;
     }
 
     /**

@@ -15,7 +15,7 @@ public class ReverseLinkedListTest {
         ListNode list2 = new ListNode(2, list3);
         ListNode node = new ListNode(1, list2);
 
-        ListNode listNode = ReverseLinkedList.reverseLinkedList(node);
+        ListNode listNode = ReverseLinkedList.reverseLinkedList4(node);
         System.out.println(listNode);
     }
 }

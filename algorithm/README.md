@@ -1,7 +1,7 @@
 
 
 
-# 二分法
+## 二分法
 [code](src/main/java/com/kino/algorithm/a_binary/BinarySearch.java) -- [test case](src/test/java/com/kino/algorithm/a_binary/TestBinarySearch.java)
 
 二分法的 leetcode 题: 
@@ -11,14 +11,15 @@
 [35. 搜索插入位置](https://leetcode.cn/problems/search-insert-position/) -- [一种解题方式](src/test/java/com/kino/algorithm/a_binary/LeetCodeTest35.java)
 
 [34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/) -- [一种解题方式](src/test/java/com/kino/algorithm/a_binary/LeetCodeTest34.java)
-# 数组
+
+## 数组
 一维数组(动态数组) - [code](src/main/java/com/kino/algorithm/b_array/KinoArray.java) -- [test case](src/test/java/com/kino/algorithm/b_array/KinoArrayTest.java)
 
 二维数组(稀疏数组) - 
 
 TODO: 合并有序数组 -
 
-# 链表
+## 链表
 单向链表 - [code](src/main/java/com/kino/algorithm/c_linked/SinglyLinkedList.java) -- [test case](src/test/java/com/kino/algorithm/c_linked/SinglyLinkedListTest.java)
 
 双向链表(哨兵) - [code](src/main/java/com/kino/algorithm/c_linked/DoubleLinkedSentinelList.java) -- [test case](src/test/java/com/kino/algorithm/c_linked/DoubleLinkedSentinelListTest.java)
@@ -34,7 +35,7 @@ TODO: 合并N个链表
 TODO: 判断回文链表
 
 
-# 递归
+## 递归
 二分查找递归 - [code](src/main/java/com/kino/algorithm/a_binary/BinarySearch.java)
 
 冒泡排序递归 - [code](src/main/java/com/kino/algorithm/d_sort/BubbleSort.java) -- [test case](src/test/java/com/kino/algorithm/d_sort/BubbleSortTest.java)
