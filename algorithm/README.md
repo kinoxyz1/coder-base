@@ -34,6 +34,8 @@ TODO: 合并有序数组 -
 
 有序链表去重([leetcode 83 删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/)) - [code](src/main/java/com/kino/algorithm/c_linked/Leetcode83.java)
 
+有序链表去重([leetcode 82 删除排序链表中的重复元素 II](https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/)) - [code](src/main/java/com/kino/algorithm/c_linked/Leetcode82.java)
+
 
 TODO: 合并N个链表
 
