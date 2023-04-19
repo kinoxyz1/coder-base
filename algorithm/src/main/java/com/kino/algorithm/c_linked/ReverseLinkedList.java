@@ -20,7 +20,7 @@ public class ReverseLinkedList {
         }
         ListNode resultNode = null;
         while (node != null) {
-            resultNode = new ListNode(node.value, resultNode);
+            resultNode = new ListNode(node.val, resultNode);
             node = node.next;
         }
         return resultNode;
@@ -107,7 +107,7 @@ public class ReverseLinkedList {
         ListNode newNode = null;
         while (node != null) {
             ListNode next = node.next;
-            newNode = new ListNode(node.value, newNode);
+            newNode = new ListNode(node.val, newNode);
             node = next;
         }
         return newNode;

@@ -28,7 +28,7 @@ TODO: 合并有序数组 -
 
 链表反转([leetcode 206 反转链表](https://leetcode.cn/problems/reverse-linked-list/)) - [code](src/main/java/com/kino/algorithm/c_linked/ReverseLinkedList.java) -- [test case](src/test/java/com/kino/algorithm/c_linked/ReverseLinkedListTest.java)
 
-TODO: 有序链表去重(包括递归)
+有序链表去重([leetcode 203 移除链表元素](https://leetcode.cn/problems/remove-linked-list-elements/)) - [code](src/main/java/com/kino/algorithm/c_linked/RemoveLinkedListByValue.java) -- [test case](src/test/java/com/kino/algorithm/c_linked/RemoveLinkedListByValueTest.java))
 
 
 TODO: 合并N个链表
