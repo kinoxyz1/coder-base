@@ -28,7 +28,11 @@ TODO: 合并有序数组 -
 
 链表反转([leetcode 206 反转链表](https://leetcode.cn/problems/reverse-linked-list/)) - [code](src/main/java/com/kino/algorithm/c_linked/ReverseLinkedList.java) -- [test case](src/test/java/com/kino/algorithm/c_linked/ReverseLinkedListTest.java)
 
-有序链表去重([leetcode 203 移除链表元素](https://leetcode.cn/problems/remove-linked-list-elements/)) - [code](src/main/java/com/kino/algorithm/c_linked/RemoveLinkedListByValue.java) -- [test case](src/test/java/com/kino/algorithm/c_linked/RemoveLinkedListByValueTest.java))
+有序链表去重([leetcode 203 移除链表元素](https://leetcode.cn/problems/remove-linked-list-elements/)) - [code](src/main/java/com/kino/algorithm/c_linked/Leetcode203.java) -- [test case](src/test/java/com/kino/algorithm/c_linked/Leetcode203Test.java)
+
+有序链表去重([leetcode 19 删除链表的倒数第 N 个结点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/)) - [code](src/main/java/com/kino/algorithm/c_linked/Leetcode19.java) 
+
+有序链表去重([leetcode 83 删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/)) - [code](src/main/java/com/kino/algorithm/c_linked/Leetcode83.java)
 
 
 TODO: 合并N个链表
