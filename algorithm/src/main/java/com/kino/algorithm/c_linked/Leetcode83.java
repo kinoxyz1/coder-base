@@ -24,7 +24,7 @@ public class Leetcode83 {
     }
 
     // 双指针
-    public static ListNode deleteDuplicates(ListNode head){
+    public static ListNode deleteDuplicates2(ListNode head){
         if (null == head || head.next == null) {
             return head;
         }
@@ -39,6 +39,19 @@ public class Leetcode83 {
             }
         }
         return s.next;
+    }
+
+    // 递归
+    public static ListNode deleteDuplicates(ListNode head){
+        if (null == head || head.next == null) {
+            return head;
+        }
+        if (head.val == head.next.val) {
+            return deleteDuplicates1(head.next);
+        } else {
+            head.next = deleteDuplicates1(head.next);
+            return head;
+        }
     }
 
     public static void main(String[] args) {
