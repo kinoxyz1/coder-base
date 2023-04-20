@@ -17,10 +17,25 @@ package com.kino.algorithm.c_linked;
  * @date 2023/4/20 00:47
  */
 public class Leetcode82 {
+    // 哨兵双指针
     public static ListNode deleteDuplicates(ListNode head) {
-
-
-        return null;
+        if (null == head || head.next == null) {
+            return head;
+        }
+        ListNode s = new ListNode(-999, head);
+        ListNode p1 = s;
+        ListNode p2;
+        while ((p2 = p1.next) != null) {
+            while (p2.next != null && p2.val == p2.next.val) {
+                p2 = p2.next;
+            }
+            if (p1.next != p2) {
+                p1.next = p2.next;
+            } else {
+                p1 = p2;
+            }
+        }
+        return s.next;
     }
 
     public static void main(String[] args) {
