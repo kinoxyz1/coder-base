@@ -17,8 +17,25 @@ package com.kino.algorithm.c_linked;
  * @date 2023/4/20 00:47
  */
 public class Leetcode82 {
-    // 哨兵双指针
+
+    // 递归
     public static ListNode deleteDuplicates(ListNode head) {
+        if (null == head || head.next == null) {
+            return head;
+        }
+        if (head.val == head.next.val) {
+            while (head.next != null && head.next.val == head.val) {
+                head = head.next;
+            }
+            return deleteDuplicates(head.next);
+        } else {
+            head.next = deleteDuplicates(head.next);
+            return head;
+        }
+    }
+
+    // 哨兵双指针
+    public static ListNode deleteDuplicates1(ListNode head) {
         if (null == head || head.next == null) {
             return head;
         }
@@ -38,7 +55,35 @@ public class Leetcode82 {
         return s.next;
     }
 
+    // 哨兵三指针
+    public static ListNode deleteDuplicates2(ListNode head) {
+        if (null == head || head.next == null) {
+            return head;
+        }
+        ListNode s = new ListNode(-999, head);
+        ListNode p1 = s;
+        ListNode p2 = p1.next;
+        ListNode p3 = p2.next;
+        while (p3 != null) {
+            if (p2.val == p3.val) {
+                while (p3 != null &&  p3.val == p2.val) {
+                    p3= p3.next;
+                }
+                p1.next = p3;
+                p2 = p3;
+                if (p3 != null) {
+                    p3 = p3.next;
+                }
+            } else {
+                p1 = p2;
+                p2 = p3;
+                p3 = p3.next;
+            }
+        }
+        return s.next;
+    }
+
     public static void main(String[] args) {
-        System.out.println(deleteDuplicates(ListNode.of(1,2,3,3,4,4,5)));
+        System.out.println(deleteDuplicates(ListNode.of(1,1,1,2,3)));
     }
 }
