@@ -54,6 +54,16 @@ public class Leetcode88 {
         System.arraycopy(nums2, 0, nums1, 0, nums2.length);
     }
 
+    /**
+     * 递归函数
+     * @param nums1 将两个有序数组合并后的数组
+     * @param i 前一个有序数组的起始位置
+     * @param iEnd 前一个有序数组的结束位置
+     * @param j 后一个有序数组的起始位置
+     * @param jEnd 后一个有序数组的结束位置
+     * @param nums2 新数组
+     * @param k 新数组的下标
+     */
     public static void recursion(int[] nums1, int i, int iEnd, int j, int jEnd, int[] nums2, int k){
         if (i > iEnd) {
             System.arraycopy(nums1, j, nums2, k, jEnd - j + 1);
