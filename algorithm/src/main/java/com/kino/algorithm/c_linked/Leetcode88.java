@@ -27,7 +27,7 @@ import java.util.Arrays;
  * @date 2023/5/1 22:58
  */
 public class Leetcode88 {
-    public static void merge(int[] nums1, int m, int[] nums2, int n) {
+    public static void merge1(int[] nums1, int m, int[] nums2, int n) {
         int point = 0;
         for (int i = 0; i < n; i++) {
             if (point == m) {
@@ -47,10 +47,35 @@ public class Leetcode88 {
         }
     }
 
+    public static void merge(int[] nums1, int m, int[] nums2, int n) {
+        System.arraycopy(nums2, 0, nums1, m, n);
+        nums2 = new int[nums1.length];
+        recursion(nums1, 0, m-1, m, n+m-1, nums2, 0);
+        System.arraycopy(nums2, 0, nums1, 0, nums2.length);
+    }
+
+    public static void recursion(int[] nums1, int i, int iEnd, int j, int jEnd, int[] nums2, int k){
+        if (i > iEnd) {
+            System.arraycopy(nums1, j, nums2, k, jEnd - j + 1);
+            return;
+        }
+        if (j > jEnd) {
+            System.arraycopy(nums1, i, nums2, k, iEnd - i + 1);
+            return;
+        }
+        if (nums1[i] < nums1[j]) {
+            nums2[k] = nums1[i];
+            recursion(nums1, ++i, iEnd, j, jEnd, nums2, ++k);
+        } else {
+            nums2[k] = nums1[j];
+            recursion(nums1, i, iEnd, ++j, jEnd, nums2, ++k);
+        }
+    }
+
     public static void main(String[] args) {
-        int[] nums1 = new int[]{1,2,3,0,0,0};
-        int[] nums2 = new int[]{2,5,6};
-        merge(nums1, 3, nums2, 3);
+        int[] nums1 = new int[]{0};
+        int[] nums2 = new int[]{1};
+        merge(nums1, 0, nums2, 1);
         System.out.println(Arrays.toString(nums1));
     }
 }
