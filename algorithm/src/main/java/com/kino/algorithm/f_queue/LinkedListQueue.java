@@ -21,16 +21,28 @@ public class LinkedListQueue<E> implements Queue<E>, Iterable<E> {
 
     private Node<E> head = new Node<>(null, null);
     private Node<E> tail = head;
+    int size;
+    int capacity;
+
+    {
+        tail.next = head;
+    }
+
+    public LinkedListQueue(int capacity) {
+        this.capacity = capacity;
+    }
 
     public LinkedListQueue() {
-        tail.next = head;
+
     }
 
     @Override
     public boolean offer(E value) {
+        if (isFull()) return false;
         Node<E> added = new Node<>(value, head);
         tail.next = added;
         tail = added;
+        size++;
         return true;
     }
 
@@ -40,6 +52,7 @@ public class LinkedListQueue<E> implements Queue<E>, Iterable<E> {
         Node<E> remote = head.next;
         head.next = remote.next;
         if (remote == tail) tail = remote;
+        size--;
         return remote.val;
     }
 
@@ -56,7 +69,7 @@ public class LinkedListQueue<E> implements Queue<E>, Iterable<E> {
 
     @Override
     public boolean isFull() {
-        return false;
+        return size == capacity;
     }
 
     @Override
