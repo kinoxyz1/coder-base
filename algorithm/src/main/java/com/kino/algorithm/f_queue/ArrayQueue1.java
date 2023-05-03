@@ -3,13 +3,14 @@ package com.kino.algorithm.f_queue;
 import java.util.Iterator;
 
 /**
- * 环形队列实现队列
+ * 环形队列实现队列:
+ * 该方法需要预留一个空位给 tail 指针, 如果不预留一个空位, 在最后一个位置被写入记录后, tail 会和 head 相等, 就无法判断是空还是满了.
  *
  * @author kino
  * @date 2023/5/2 22:09
  */
 public class ArrayQueue1<E> implements Queue<E>, Iterable<E> {
-    E[] element; // 数组
+    private final E[] element; // 数组
     private int head = 0; // 头指针
     private int tail = 0; // 尾指针
 
@@ -30,7 +31,7 @@ public class ArrayQueue1<E> implements Queue<E>, Iterable<E> {
     public E poll() {
         if (isEmpty()) return null;
         E value = element[head];
-        head = (head+1) % element.length;
+        head = (head + 1) % element.length;
         return value;
     }
 
@@ -54,6 +55,7 @@ public class ArrayQueue1<E> implements Queue<E>, Iterable<E> {
     public Iterator<E> iterator() {
         return new Iterator<E>() {
             int point = 0;
+
             @Override
             public boolean hasNext() {
                 return point != tail;
