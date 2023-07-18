@@ -15,7 +15,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.kino.algorithm.a_binary;
 
 import org.junit.jupiter.api.DisplayName;
